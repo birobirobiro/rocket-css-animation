@@ -1,21 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background: #121214;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .pulse {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 120px;
+  height: 120px;
   background: #8257e6;
   border-radius: 50%;
 }
@@ -31,14 +27,13 @@ body {
   height: 100%;
   
   animation: animate 2.5s linear infinite;
-
-  animation-delay: calc(.5s * var(--i));
+  animation-delay: calc(-0.5s * var(--i));
 }
 
 @keyframes animate {
   0% {
     transform: scale(1);
-    opacity: .5;
+    opacity: 0.5;
   }
   90% {
     transform: scale(3);
@@ -53,8 +48,7 @@ body {
   position: relative;
   top: 50px;
   text-align: center;
-
-  animation: rocket .3s ease infinite;
+  animation: rocket .4s ease infinite;
 }
 
 @keyframes rocket {
@@ -67,7 +61,7 @@ body {
 }
 
 .rocket img {
-  margin-top: -10px;
-  width: 50%;
-  height: 50%;
+  margin-top: -20px;
+  width: 45%;
+  height: 45%;
 }
